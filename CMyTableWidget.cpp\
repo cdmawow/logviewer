@@ -1,0 +1,90 @@
+#include "CMyTableWidget.h"
+/*
+MyTableWidget::MyTableWidget(QWidget* pParent)
+   :QTableWidget(pParent)
+{
+   setItemDelegate(new No_Focus_Delegate());
+
+   setShowGrid(false);
+
+   //设置表头字体加粗
+ //  QFont font = this->font();
+  //  font.setBold(true);
+   // m_pTableWidget->horizontalHeader()->setFont(font);
+
+    horizontalHeader()->setStretchLastSection(true); //设置充满表宽度,该代码是实现将header最后的空间补全
+      // 下句代码和上一句一起起作用，从而实现多列将列头均分,即无论多少列，都不会出现水平滚动条。
+    horizontalHeader()->setResizeMode(QHeaderView::Stretch);
+
+    // 以下一句实现使每列的列宽按列所在的内容自适应宽度
+    // horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
+    verticalHeader()->setResizeMode(QHeaderView::ResizeToContents);
+    verticalHeader()->setDefaultSectionSize(10); //设置行距
+    setFrameShape(QFrame::NoFrame); //设置无边框
+    setShowGrid(false); //设置不显示格子线
+    verticalHeader()->setVisible(false); //设置垂直头不可见
+    setSelectionMode(QAbstractItemView::ExtendedSelection); //可多选（Ctrl、Shift、 Ctrl+A都可以）
+    setSelectionBehavior(QAbstractItemView::SelectRows); //设置选择行为时每次选择一行
+    setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
+    horizontalHeader()->resizeSection(0,20); //设置表头第一列的宽度为20
+    horizontalHeader()->setFixedHeight(25); //设置表头的高度
+    setStyleSheet("selection-background-color:0xff0000;"); //设置选中背景色
+  //  m_pTableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}"); //设置表头背景色
+
+    //设置水平、垂直滚动条样式
+    horizontalScrollBar()->setStyleSheet("QScrollBar{background:transparent; height:10px;}"
+    "QScrollBar::handle{background:lightgray; border:2px solid transparent; border-radius:5px;}"
+    "QScrollBar::handle:hover{background:gray;}"
+    "QScrollBar::sub-line{background:transparent;}"
+    "QScrollBar::add-line{background:transparent;}");
+    verticalScrollBar()->setStyleSheet("QScrollBar{background:transparent; width: 10px;}"
+    "QScrollBar::handle{background:lightgray; border:2px solid transparent; border-radius:5px;}"
+    "QScrollBar::handle:hover{background:gray;}"
+    "QScrollBar::sub-line{background:transparent;}"
+    "QScrollBar::add-line{background:transparent;}");
+
+   //点击表时不对表头行光亮（获取焦点）
+   horizontalHeader()->setHighlightSections(false);
+
+   QObject::connect(horizontalHeader(), SIGNAL(sectionClicked(int)), this, SLOT(onHeaderClicked(int)));
+   createActions();
+}
+
+void MyTableWidget::onHeaderClicked(int column)
+{
+    int i = 0;
+}
+
+MyTableWidget::~MyTableWidget()
+{
+
+}
+
+void MyTableWidget::insertItem(int nRow, int nCol, QTableWidgetItem *pItem)
+{
+    setItem(nRow, nCol, pItem);
+}
+
+void MyTableWidget::createActions()
+  {
+    //创建菜单项
+    pop_menu = new QMenu();
+    action_name = new QAction(this);
+
+}
+
+void MyTableWidget::contextMenuEvent(QContextMenuEvent *event)
+  {
+    pop_menu->clear(); //清除原有菜单
+    QPoint point = event->pos(); //得到窗口坐标
+    QTableWidgetItem *item = this->itemAt(point);
+    if(item != NULL)
+    {
+       sort_style = pop_menu->addMenu("排序");
+       sort_style->addAction(action_name);
+
+       //菜单出现的位置为当前鼠标的位置
+       pop_menu->exec(QCursor::pos());
+       event->accept();
+    }
+ }*/
