@@ -1,4 +1,5 @@
-//20161014 cm make fileData
+//20161014 cm
+//数据发生器，主要实现功能是，制作随机的log数据
 
 #ifndef CFileMaker_H
 #define CFileMaker_H

@@ -27,7 +27,7 @@ void CThread::run()
         emit sendLog(itemList);
         tempNum ++ ;
         tempNum = tempNum%100;
-        QThread::sleep(1);
+        QThread::msleep(50);
     }
 
     stopped = false;
