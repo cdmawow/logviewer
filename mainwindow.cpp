@@ -97,19 +97,19 @@ void MainWindow::on_nokButton_clicked()
     filterLogOn = true;
 }
 
-QString MainWindow::timeConvert(double dTime)
+QString MainWindow::timeConvert(edouble dTime)
 {
-    QDateTime *dt=new QDateTime;
+    QDateTime *dt = new QDateTime;
     QString str;
-    int day =dTime/1;
-    int secs =(dTime-day)*24*60*60/1;
+    int day = dTime/1;
+    int secs = (dTime-day)*24*60*60/1;
     int msecs =((dTime-day)*24*60*60-secs)*1000;
     dt->setDate(QDate(1970,1,1));
     dt->setTime(QTime(0,0,0,0));
-    *dt = dt->addDays(day);
+    *dt = dt-> addDays(day);
     *dt = dt-> addSecs(secs);
-    *dt = dt->addMSecs(msecs);
-    str = dt->toString("yyyy-MM-dd hh:mm:ss.zzz");
+    *dt = dt-> addMSecs(msecs);
+    str = dt-> toString("yyyy-MM-dd hh:mm:ss.zzz");
     return str;
 }
 
